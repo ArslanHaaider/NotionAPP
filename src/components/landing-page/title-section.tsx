@@ -1,5 +1,5 @@
-import React from 'react'
 
+import React from 'react';
 
 interface TitleSectionProps{
     title:string;
@@ -23,6 +23,7 @@ dark:from-brand-primaryBlue
 dark:to-brand-primaryPurple'>
 <div className='rounded-full px-3 py-1 dark:bg-black'>
 {pill}
+
 </div>
 </article>
 {subheading ?(
@@ -48,5 +49,10 @@ dark:to-brand-primaryPurple'>
    </>
   )
 }
+
+
+
+
+
 
 export default TitleSection
