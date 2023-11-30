@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,14 +71,14 @@
   }
 }
 
-/* @layer base {
+@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-} */
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -92,6 +97,7 @@ body {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }

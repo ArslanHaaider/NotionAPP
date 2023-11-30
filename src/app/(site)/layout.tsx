@@ -9,10 +9,7 @@ export default function HomePageLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
