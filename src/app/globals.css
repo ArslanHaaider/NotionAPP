@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
  
+html,
+body {
+  height: 100%;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,25 +80,15 @@
     @apply bg-background text-foreground;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-.animate-slide{
-  animation:15s slide linear infinite
+.animate-slide {
+  animation: 15s slide linear infinite;
 }
 
-@keyframes slide{
-  from{
+@keyframes slide {
+  from {
     transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
 }
