@@ -1,10 +1,18 @@
-import React from 'react'
+import "../globals.css";
+import React from "react";
+import Header from "../components/landing-page/header";
 
-
-const HomePageLayout = ({children}:{children:React.ReactNode}) => {
+export default function HomePageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-   <main>{children}</main>
-  )
+    <html lang="en">
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html>
+  );
 }
-
-export default HomePageLayout
