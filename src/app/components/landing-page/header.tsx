@@ -14,7 +14,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "../ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 
