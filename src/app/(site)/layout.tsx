@@ -1,6 +1,6 @@
 import "../globals.css";
 import React from "react";
-import Header from "../components/landing-page/header";
+import Header from "../../components/landing-page/header";
 
 export default function HomePageLayout({
   children,

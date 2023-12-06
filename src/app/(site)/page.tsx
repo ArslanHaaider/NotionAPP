@@ -1,5 +1,5 @@
-import TitleSection from '../components/landing-page/title-section';
-import { Button } from '../components/ui/button';
+import TitleSection from '../../components/landing-page/title-section';
+import { Button } from '../../components/ui/button';
 import Image from 'next/image';
 import React from 'react';
 import Banner from '../../../public/appBanner.png';
@@ -10,9 +10,9 @@ import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from '@/lib/constants';
 import { randomUUID } from 'crypto';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
-import CustomCard from '../components/landing-page/custom-card';
-import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
-import { CardContent, CardDescription, CardTitle } from '../components/ui/card';
+import CustomCard from '../../components/landing-page/custom-card';
+import { Avatar, AvatarFallback, AvatarImage } from '../../components/ui/avatar';
+import { CardContent, CardDescription, CardTitle } from '../../components/ui/card';
 
 const HomePage = () => {
   return (
