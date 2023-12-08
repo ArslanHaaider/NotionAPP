@@ -7,7 +7,7 @@ import {
   subscriptions,
   users,
   workspaces,
-} from '../../../migration/schema';
+} from '../../../migrations/schema';
 import { files } from './schema';
 
 export type Json =

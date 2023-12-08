@@ -10,7 +10,7 @@ import AppStateProvider from '@/lib/providers/state-provider';
 import { SupabaseUserProvider } from '@/lib/providers/supabase-user-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { SocketProvider } from '@/lib/providers/socket-provider';
-
+import db from '@/lib/supabase/db';
 const inter = DM_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={twMerge('bg-background', inter.className)}>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

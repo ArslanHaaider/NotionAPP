@@ -1,6 +1,6 @@
 'use server';
 import { validate } from 'uuid';
-import { files, folders, users, workspaces } from '../../../migration/schema';
+import { files, folders, users, workspaces } from '../../../migrations/schema';
 import db from './db';
 import { File, Folder, Subscription, User, workspace } from './supabase.types';
 import { and, eq, ilike, notExists } from 'drizzle-orm';
