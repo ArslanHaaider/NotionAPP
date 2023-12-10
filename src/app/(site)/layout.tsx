@@ -8,10 +8,9 @@ export default function HomePageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+      <main>
         <Header/>
-        {children}</body>
-    </html>
+        {children}
+        </main>
   );
 }
