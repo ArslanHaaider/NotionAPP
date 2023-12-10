@@ -33,7 +33,7 @@ const HomePage = () => {
           title="All-In-One Collaboration and Productivity Platform"
         />
         <div
-          className="bg-white
+          className="
           p-[2px]
           mt-6
           rounded-xl
@@ -49,7 +49,6 @@ const HomePage = () => {
             rounded-[10px]
             p-6
             text-2xl
-            bg-background
           "
           >
             Get Cypress Free
