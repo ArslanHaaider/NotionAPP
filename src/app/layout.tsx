@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -10,7 +8,6 @@ import AppStateProvider from '@/lib/providers/state-provider';
 import { SupabaseUserProvider } from '@/lib/providers/supabase-user-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { SocketProvider } from '@/lib/providers/socket-provider';
-import db from '@/lib/supabase/db';
 const inter = DM_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -27,20 +24,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={twMerge('bg-background', inter.className)}>
 
-        <ThemeProvider
-          attribute="class"
+        {/* <ThemeProvider
           defaultTheme="dark"
-          enableSystem
-        >
+        > */}
           <AppStateProvider>
             <SupabaseUserProvider>
               <SocketProvider>
                 {children}
-                <Toaster />
+                {/* <Toaster /> */}
               </SocketProvider>
             </SupabaseUserProvider>
           </AppStateProvider>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
