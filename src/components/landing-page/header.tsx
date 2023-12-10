@@ -18,6 +18,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import ModeToggle from "../global/mode-toggle";
+import { ThemeProvider } from "@/lib/providers/next-theme-provider";
 
 const routes = [
   { title: "Features", href: "#features" },
@@ -112,7 +113,7 @@ const Header = () => {
                 lg:grid-cols-[.75fr_1fr]
                 "
               >
-                <li className="row-span-3">
+                <li className="row-span-3 dark:text-white">
                   <span
                     className="flex h-full w-full select-none
                   flex-col
@@ -129,17 +130,24 @@ const Header = () => {
                     Welcome
                   </span>
                 </li>
-                <ListItem href="#" title="Introduction">
-                  <span className="text-red-500">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </span>
-                </ListItem>
-                <ListItem href="#" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="#" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
+                <li title="Introduction">
+                  <h2 className="font-semibold">
+                  Introduction
+                  </h2>
+                  <span className="dark:text-white">Re-usable components built using Radix UI and Tailwind CSS.</span>
+                </li>
+                <li title="Installation">
+                  <h2 className="dark:text-washed-purple-700 font-semibold">
+                  Installation
+                  </h2>
+                  <span className="dark:text-white">How to install dependencies and structure your app.</span>
+                </li>
+                <li title="Typography">
+                  <h2 className="font-semibold">
+                  Typography
+                  </h2>
+                  <p className="dark:text-white"> Styles for headings, paragraphs, lists...etc</p>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -157,12 +165,18 @@ const Header = () => {
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4  md:grid-row-2  ">
-                <ListItem title="Pro Plan" href={"#"}>
-                  Unlock full power with collaboration.
-                </ListItem>
-                <ListItem title={"free Plan"} href={"#"}>
-                  Great for teams just starting out.
-                </ListItem>
+              <li title="Pro Plan">
+                  <h2 className="font-semibold">
+                  Pro Plan
+                  </h2>
+                  <p className="dark:text-white"> Unlock full power with collaboration.</p>
+                </li>
+              <li title="free Plan">
+                  <h2 className="font-semibold">
+                  free Plan
+                  </h2>
+                  <p className="dark:text-white"> Great for teams just starting out..</p>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
