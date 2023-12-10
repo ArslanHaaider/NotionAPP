@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -24,18 +25,20 @@ export default function RootLayout({
     <html lang="en">
       <body className={twMerge('bg-background', inter.className)}>
 
-        {/* <ThemeProvider
-          defaultTheme="dark"
-        > */}
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
           <AppStateProvider>
             <SupabaseUserProvider>
               <SocketProvider>
                 {children}
-                {/* <Toaster /> */}
+                <Toaster />
               </SocketProvider>
             </SupabaseUserProvider>
           </AppStateProvider>
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );

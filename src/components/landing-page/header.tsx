@@ -17,6 +17,7 @@ import {
 } from "../ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
+import ModeToggle from "../global/mode-toggle";
 
 const routes = [
   { title: "Features", href: "#features" },
@@ -209,6 +210,7 @@ const Header = () => {
         justify-end
       "
       >
+        <ModeToggle/>
         <Link href={"/login"}>
           <Button variant="ghost" className=" p-1 hidden sm:block">
             Login
